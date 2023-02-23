@@ -29,15 +29,59 @@
 ##### 🪩 Assignment 4 Description
 
 Program an Arduino board to do something. You may also wish to use this assignment to build on the previous assignment.
-
 Include code snippets in your documentation.
 Draw a schematic of your circuit.
 Be ready to do a brief live demo.
 
 <br>
-##### 🪩 Inspiration
+##### 🪩 Ideation
+
+I might have mentioned it once or twice (or a thousand times) before, that I'm a huge fan of colorful lights and lights going through colorful materials. Below are some of the examples. So I decided to make a lamp that will create changing lighting effects triggered by approaching aduience. 
+
+![image of embroidery](./inspo2.jpeg)
+![image of embroidery](./inspo1.jpeg)
 
 
+<br>
+##### 🪩 Process & Iterations
+
+I decided to use an ultrasonic sensor to measure the distance from the lamp to the approaching person (or object, or ghost). The sensor will then trigger a servo and some LEDs in the lamp to create a changing light pattern.
+
+It took me a while (actually it's 4 days 🥹) to figure out the mechanical design of the rotation. My original idea was to put a few pieces of acrylic boards of different colors in parallel, then rotate them to make the overlapping area change, and the light going through these layers will change in shape and color accordingly. Here are a few of my failed 3d printings. It turned out that arylic boards are heavy, and the servo is not powerful to drive the entire sturcture smoothly enough.
+
+
+![image of embroidery](./fail1.png)
+![image of embroidery](./fail2.png)
+
+
+In the end I decided to adopt the press fit approach again, using acrylic boards of different colors to make a lamp, and rotate the lamp as a whole. 
+
+![image of embroidery](./acrylic1.png)
+![image of embroidery](./acrylic2.png)
+
+
+Then it's time to connect the circuit and program the arduino board! The code will be attached at the end of this page.
+
+![image of embroidery](./circuit.png)
+![image of embroidery](./test1.gif)
+
+
+And now it's the fun time to assemble everything! I worked on the project at home, so I had to be a bit creative on materials, and used a tissue box to make the lighting effect better. (There're still half a box of freed facial tissues flying all over my bedroom at the moment.)
+
+![image of embroidery](./assemble1.jpg)
+![image of embroidery](./assemble2.jpg)
+
+<br>
+##### 🪩 Look at the Lamp!
+
+Voila! ✨
+
+
+
+<br>
+//END OF ASSIGNMENT//
+
+<i>Click <a href='./sketch.ino' download target="_blank"> here </a> to download my code.</i>
 
 <br>
 
