@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>PS70: Intro to Digital Fabrication </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div style="align-items: left; justify-content:left;" class="container-fluid">
+    <h3 class="nav-title"><b> PS70: Intro to Digital Fabrication </b></h3>
+    <div class="navbar-nav">
+      <h4></h4>
+      <h4><a class="nav-link" href="../index.html"><small> Home </small></a></h4>
+      <h4><a class="nav-link" href="../about.html"><small> About </small></a></h4>
+      <h4><a class="nav-link" href="../final.html"><small>Final Project</small></a></h4>
+    </div>
+  </div>
+</nav>
+
+<body>
+
+
+<xmp style="display:none;">
+<br> 
+
+#### <b>Week 6: Electronic Input Devices - Capacitive Sensor & Microphone</b>
+<br>
+
+##### 🎛️ Assignment 6 Description
+
+Make a capacitive sensor to measure a physical quantity with your microcontroller. Avoid the delay() function; use timers instead. Select another sensor. Include schematics of each sensor. Calibrate each sensor by plotting points on a graph. Discuss the relationship between the signals recorded by your microcontroller and the physical quantities that you're measuring.
+
+<br>
+##### 🎛️ Capacitive Sensor
+
+This week, we learnt to make capacitive sensors. They could be used to measure distance, weight, water level, etc. I used the transmit-receive method, or tx-rx method, to make a sensor to measure the distance between two pieces of copper foil tape. To make the calibration easier, I tapped them on tiny paper boxes so that I could get more steady readings from the arduino serial plotter. And I measured the distance with a ruler, although it would be better if I did the measurement with a caliper. Here are some process photos and the result. From the plot we can see the relationship between the distance and the reading is exponential delay.
+
+![image of embroidery](./cap_c.jpg)
+![image of embroidery](./cap02.jpg)
+![image of embroidery](./plot01.png)
+
+![image of embroidery](./txrx.png)
+
+
+<br>
+##### 🎛️ Adafruit MEMS Microphone Breakout SPW2430
+
+For the second sensor, I experimented with the microphone, as I planned to include it in my final project. I managed to measure the alert volume of my laptop. In the future, I would like to measure the frequency of ambient sound as well. I tried but failed on the Fast Fourier Transform (FFT) this week. 🥲 From the plot we can see the relationship between the volume and the reading is linear growth.
+
+![image of embroidery](./mic_c.jpg)
+![image of embroidery](./mic01.jpg)
+![image of embroidery](./plot02.png)
+
+![image of embroidery](./mems.png)
+
+<br>
+//END OF ASSIGNMENT//
+
+<i>Download my codes here!</i>   
+<i><a href='./sketch_cap.ino'> Capacitive Sensor: Measuring Distance</a></i>   
+<i><a href='./sketch_vol.ino'> MEMS Microphone: Measuring Volume</a></i>
+
+<br>
+
+</xmp>
+</body>
+
+<script src="../strapdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+</html>
