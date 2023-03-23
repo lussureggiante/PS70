@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>PS70: Intro to Digital Fabrication </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div style="align-items: left; justify-content:left;" class="container-fluid">
+    <h3 class="nav-title"><b> PS70: Intro to Digital Fabrication </b></h3>
+    <div class="navbar-nav">
+      <h4></h4>
+      <h4><a class="nav-link" href="../index.html"><small> Home </small></a></h4>
+      <h4><a class="nav-link" href="../about.html"><small> About </small></a></h4>
+      <h4><a class="nav-link" href="../final.html"><small>Final Project</small></a></h4>
+    </div>
+  </div>
+</nav>
+
+<body>
+
+
+<xmp style="display:none;">
+<br> 
+
+#### <b>Week 7: Electronic Output Devices - DotStar, Colorize Tunes & Prepare for CNC</b>
+<br>
+
+##### 🌈 Assignment 7.1 Description
+
+Use an output device that you haven't used before today. Write a microcontroller program that integrates at least one input device and one output device. Avoid the delay() function and use the C++ class structure. Use an oscilloscope to discover the time domain at which your output device is operating. Is it on a fixed clock? What's its speed? Share images and describe your findings.
+
+<br>
+##### 🌈 LED Strips
+
+This week, we learnt about many output devices in class, including the Adafruit NeoPixel LED strips. LED strip will be an important part of my final project too. After some research, I bought an Adafruit DotStar Digital LED Strip, which in comparison, has faster data rate, and is easier to interface to a broader range of devices. I then followed information on <a href="https://learn.adafruit.com/adafruit-dotstar-leds" target="_blank">this page</a> to program the strip. I also switched from Arduino UNO to a tiny ESP32 microcontroller: <a href="https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/" target="_blank">Seeed Studio XIAO ESP32C3</a> this week, as I would like to use a small-sized microcontroller with wifi and bluetooth function in my final project. After the initial setup, I connected the oscilloscope to the DotStar LED strip. The wave was on a 500mV - 1 microsecond scale, yet it still looked like noise. A few of us in the lab was trying different settings but could not make it work 🥲. In the end we decided to move on and learn it again in the next class.
+
+![image of embroidery](./test1.jpg)
+![image of embroidery](./test2.jpg)
+![image of embroidery](./test3.jpg)
+
+<br>
+##### 🌈 Input and Output(s)
+
+In my final project, I plan to map a series of ambient sound to a spectrum of color in the LED strip. So this week, to get things started, I decided to use a potentiometer as the input device to control the DotStar LED strip, before I get the sound file and frequency analysis ready. However, after achieving that, I found it not quite interesting yet. That's why I added a second output device, a buzzer, and make frequencies and colors corresponding to each other. So it would work like a pitch visualizer for those (like me) who have a hard time telling the difference of pitches. I've also included an external battery pack to ensure sufficient power supply to the LED strip. Below is my circuit.
+
+![image of embroidery](./circuit.jpg)
+
+<br>
+##### 🌈 Final Result
+
+Voila! ✨
+
+![image of embroidery](./final1.jpg)
+![image of embroidery](./final2.jpg)
+![image of embroidery](./final3.jpg)
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/kzNeP9veWqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br>
+##### 🗻 Assignment 7.2 Description
+
+Prepare CAD files for CNC. Consider either 2D DXF files for routing sheet material (like plywood or OSB), or 3D STL files to mill out a (2.5D) shape. We will also cover molding & casting, so you may want to consider milling a mold.
+
+<br>
+//END OF ASSIGNMENT//
+
+<i>Click the links below to download my code.</i>   
+<i><a href='./sketch_cap.ino'> Capacitive Sensor: Measuring Distance</a></i>   
+<i><a href='./sketch_vol.ino'> MEMS Microphone: Measuring Volume</a></i>
+
+<br>
+
+</xmp>
+</body>
+
+<script src="../strapdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+</html>
