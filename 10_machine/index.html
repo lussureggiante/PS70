@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>PS70: Intro to Digital Fabrication </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div style="align-items: left; justify-content:left;" class="container-fluid">
+    <h3 class="nav-title"><b> PS70: Intro to Digital Fabrication </b></h3>
+    <div class="navbar-nav">
+      <h4></h4>
+      <h4><a class="nav-link" href="../index.html"><small> Home </small></a></h4>
+      <h4><a class="nav-link" href="../about.html"><small> About </small></a></h4>
+      <h4><a class="nav-link" href="../final.html"><small>Final Project</small></a></h4>
+    </div>
+  </div>
+</nav>
+
+<body>
+
+
+<xmp style="display:none;">
+<br> 
+
+#### <b>Week 10: Machine Making & MVP</b>
+<br>
+
+##### ⚙️ Assignment 10.1 Description
+
+Work with your lab group to build a "sidewalk plotter"; a 2+ DoF drawing machine. Your team is encouraged to heavily modify the example hardware and software. At a minimum, you should implement a new end-effector.
+
+Drawing machines will be evaluated with respect to:
+1. Ability to calibrate motor position (i.e. guarantee the "home" position is the same each time you power on the device) 2. Novelty of end-effector / drawing technique 3. Precision: ability to draw a 1m-diameter circle and mark its center point 4. Complexity of drawing output
+
+<br>
+##### ⚙️ Process
+
+I worked with Cindy, Ashley, and Abigail on the hardware part of the plotter. Following the model below, we laser cut necessary parts and assembled the plotter. Particularly, we redesigned the gantry plate, so it fit better with the specific rails we used. After 2 days' work, it was a success. We tried the plotter with Nathan's ESP32 and code, the plotter was able to move in 2-dimension. 
+
+Anika designed an end effector smartly integrated with a spring, pushing the chalk to draw on the sidewalk.
+
+<iframe src="https://myhub.autodesk360.com/ue2d91ec7/shares/public/SH512d4QTec90decfa6ec7a198a325845622?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+
+
+![image of embroidery](./resize01.jpg)
+![image of embroidery](./resize02.jpeg)
+![image of embroidery](./motor.jpeg)
+![image of embroidery](./end.jpg)
+
+![image of embroidery](./install01.jpeg)
+![image of embroidery](./install02.jpeg)
+
+<br>
+##### ⚙️ Demo
+
+Integrated with software team's effort, it didn't work as smoothly on the asphalt pavement (right) as on the floor in the classroom (left). But... Voila! ✨
+
+![image of embroidery](./hardware.gif)
+![image of embroidery](./final.jpg)
+
+<br>
+
+##### 🧠 Assignment 10.2 Description
+
+Minimum Viable Product: Make a serious attempt at the most challenging/intimidating aspect of your final project.
+
+<br>
+##### 🧠 Process
+
+Now that I've got my ESP32 and TouchDesigner talking to each other, my next challenge is to get my MUSE2 EEG Headband to talk to TouchDesigner and ESP32, and use the EEG signal to control the LED strip.
+
+I downloaded the Mind Monitor app, where it exports the live data of a MUSE headband through bluetooth. Then with the OSC protocol in TouchDesigner, I was able to import the data. In this particular case, I've chosen to use Gamma brainwava to control the LED strip, as it reflects heighted perception and peak mental state.
+
+![image of embroidery](./muse2.jpeg)
+![image of embroidery](./waves.png)
+
+<br>
+##### 🧠 Result
+Voila! ✨
+
+![image of embroidery](./muse.gif)
+![image of embroidery](./td.gif)
+
+<br>
+//END OF ASSIGNMENT//
+ 
+<i>Click <a href="https://choosemuse.com/blogs/news/a-deep-dive-into-brainwaves-brainwave-frequencies-explained-2/"> here</a> to learn more about the 5 main types of brainwaves.</i>  
+<i>Click <a href='./FreqMuse.ino' download target="_blank"> here </a> to download my code.</i>  
+
+<br>
+
+</xmp>
+</body>
+
+<script src="../strapdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+</html>
