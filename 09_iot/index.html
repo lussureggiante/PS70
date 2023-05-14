@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>PS70: Intro to Digital Fabrication </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div style="align-items: left; justify-content:left;" class="container-fluid">
+    <h3 class="nav-title"><b> PS70: Intro to Digital Fabrication </b></h3>
+    <div class="navbar-nav">
+      <h4></h4>
+      <h4><a class="nav-link" href="../index.html"><small> Home </small></a></h4>
+      <h4><a class="nav-link" href="../about.html"><small> About </small></a></h4>
+      <h4><a class="nav-link" href="../final.html"><small>Final Project</small></a></h4>
+    </div>
+  </div>
+</nav>
+
+<body>
+
+
+<xmp style="display:none;">
+<br> 
+
+#### <b>Week 9: Networking and IoT</b>
+<br>
+
+##### 📳 Assignment 9 Description
+
+Work with a partner or group of 3. Program one or more microcontroller(s) to obtain and respond to information from the internet or radio. Your project should include at least one input and one output.
+
+<br>
+##### 📳 Process
+
+As I was traveling this week, I had to work on my own. I decided to tackle one of the biggest challenge in my final project - getting my ESP32 to talk to TouchDesigner on my laptop through wifi. TouchDesigner will process the audio input and get frequency results, send them to ESP32, and the frequencies will be used to control the LED strip as the output.
+
+This was proved to be challenging. There were no tutorials online working on the same task. A few tutorials were about transmitting data between TD and Arduino through serial, which required a cable connection. There was also one basic tutorial about UDP communication between TD and Arduino wirelessly, but I couldn't get my ESP32 work in the same way following that tutorial.
+
+In the end, I asked ChatGPT for help (not kidding), and it was surprisingly helpful. It provided me with some code and setting suggestions - not directly usable - but good enough as a starting point where I could edit the code meeting my need. Also with the help of my friend who's an expert in TD, I figured it out!!
+
+Below are the circuit, and settings and code in TouchDesigner. TD takes audio input through my laptop, does audio analysis, the timer triggers each transmission of the frequency result through UDP protocol to ESP32. And to make debugging easier, ESP32 will send back the frequency values to TouchDesigner, so we can see what is happening at anytime (as shown in udpout1 window). So here we have, a two-way communication through wifi between ESP32 and TouchDesigner. Similar to what I did in [Week 7](../07_output/index.html), the frequency values were used to control the colors of the LED strip.
+
+![image of embroidery](./circuit.jpg)
+![image of embroidery](./td01.png)
+
+<br>
+##### 📳 Final Result
+
+Voila! ✨
+
+<iframe width="397" height="705" src="https://www.youtube.com/embed/5iM2zlTIU48" title="ESP32|TouchDesigner|LED Strip|Wifi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br>
+//END OF ASSIGNMENT//
+ 
+<i>Click <a href='./FreqToLED.ino' download target="_blank"> here</a> to download the arduino code.</i>    
+
+<br>
+
+</xmp>
+</body>
+
+<script src="../strapdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+</html>
